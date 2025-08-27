@@ -3,60 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plog</title>
+    <title>My Blog</title>
 </head>
 <body>
-    <article>
-    <h1>My Blog</h1>
-    <ul>
-        <h4>my hoppies</h4>
-        <li>reading</li>
-        <li>writing</li>    
-        <li>coding</li>
-    </ul>
-    <ol>
-        <h4>tuttorial</h4>
-        <li>step 1</li>
-        <li>step 2</li>    
-        <li>step 3</li>
-    </ol>
-    <dl>
-        <h4>my skills</h4>
-        <dt>html</dt>
-        <dd>good</dd>
-        <dt>css</dt>
-        <dd>good</dd>
-        <dt>js</dt>
-        <dd>good</dd>
-    </dl>
-    </article>
-    <section>
-        <h4>my favorite quote</h4>
-        <blockquote>
-            Be the change that you wish to see in the world.
-        </blockquote>
-    <img src="IMG-20250802-WA0047.jpg" alt="my photo" width="100" height="50" title="my photo"
-    width="300" height="500">
-    <table border="1">
-        <thead>
-            <caption>my events</caption>
 
-        <tr>
-            <th>event name</th>
-            <th>date</th>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <nav>
+            <a href="index.html" title="Go to Home Page">Home</a> |
+            <a href="about.html" title="Learn more about me">About</a> |
+            <a href="plog.html" title="Read my blog posts">Blog</a> 
             
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>event 1</td>
-            <td>20/1</td>
-        </tr>
-        <tr>
-            <td>event 2</td>
-            <td>19/1</td>
-        </tr> 
-        </tbody>  
-        
+    </header>
+
+    <main>
+    
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am <strong>John Doe</strong>, a passionate blogger who loves sharing ideas.</p>
+
+            <h3>My Hobbies</h3>
+            <ul>
+                <li>Reading</li>
+                <li>Coding</li>
+                <li>Traveling</li>
+            </ul>
+
+            <h3>Author Image</h3>
+            <img src="IMG-20250802-WA0047.jpg" alt="Author's photo" title="This is John Doe" height="400" width="300"   >
+        </section>
+
+     
+        <section id="blog">
+            <h2>Blog Posts</h2>
+
+            <article id="post1">
+                <h3>How to Start Coding</h3>
+                <p>Coding is an <em>essential</em> skill for the future. Here’s how you can start:</p>
+
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Choose a programming language</li>
+                    <li>Practice with small projects</li>
+                    <li>Join a developer community</li>
+                </ol>
+
+                <h4>Glossary</h4>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>A markup language for creating web pages</dd>
+                    <dt>CSS</dt>
+                    <dd>Used to style HTML documents</dd>
+                    <dt>JavaScript</dt>
+                    <dd>A language to make web pages interactive</dd>
+                </dl>
+
+                <h4>Embedded Video</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com" 
+                        title="YouTube video" frameborder="0" allowfullscreen></iframe>
+
+                <h4>Podcast Audio</h4>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <h4>Upcoming Events</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-09-01</td>
+                            <td>Web Development Workshop</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>2025-09-15</td>
+                            <td>Blogging Conference</td>
+                            <td>New York</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">More events coming soon!</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <p><a href="#about">Back to About Section</a></p>
+            </article>
+        </section>
+    </main>
+
+  
+
+   
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can email me at <a href="mailto:mohamednoran473@gmail.com">noran mohammed</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
