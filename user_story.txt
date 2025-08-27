@@ -1,0 +1,43 @@
+As a user, I want a valid HTML structure (<!DOCTYPE html>, <html>, <head>, <body>) so that the page loads correctly in any browser.
+
+As a user, I want a proper page title so that I can identify the page in my browser tab.
+
+As a reader, I want blog posts to use headings (<h1>–<h6>) and paragraphs so that the content is well-structured and easy to read.
+
+As a reader, I want important words emphasized using <strong> or <em> so that I can identify key points quickly.
+
+As a developer, I want to use id and class attributes on elements so that I can style or reference them later.
+
+As a reader, I want tooltips (title attribute) on links and images so I can get extra information when I hover.
+
+As a visitor, I want to navigate between Home, About, and Blog pages using links so that I can move around the site easily.
+
+As a visitor, I want an email link (mailto:) on the Contact page so I can send feedback directly.
+
+As a visitor, I want internal navigation (anchor links) so I can jump to specific blog post sections.
+
+As a blogger, I want to create an unordered list of my hobbies on the About page so visitors can know more about me.
+
+As a blogger, I want to create an ordered list of steps in a tutorial blog post so readers can follow instructions in order.
+
+As a blogger, I want a description list for glossary terms in my blog so readers can understand key definitions.
+
+As a reader, I want to see an image of the blog author on the About page so that I can identify the writer.
+
+As a reader, I want images to include alt text so that users with disabilities or broken images can still understand the content.
+
+As a reader, I want a video embedded inside a blog post (e.g., YouTube iframe) so that I can watch related content.
+
+As a reader, I want to listen to audio (like a podcast episode) in the blog so that I can consume content differently.
+
+As a reader, I want a schedule table in a blog post so I can see upcoming events clearly.
+
+As a reader, I want the table to have headers (<th>) so I can understand column meanings.
+
+As a reader, I want the table to use <thead>, <tbody>, and <tfoot> so that the structure is consistent and readable.
+
+As a developer, I want to use semantic elements (<header>, <footer>, <nav>, <section>, <article>, <aside>, <main>) so that the page is structured for SEO and accessibility.
+
+As a reader, I want each blog post inside an <article> so that the content is distinct and self-contained.
+
+As a reader, I want side content (ads, author bio, related links) placed inside <aside> so that it doesn’t distract from the main content.
