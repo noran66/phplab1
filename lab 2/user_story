@@ -1,0 +1,68 @@
+📑 Project Requirements (User Stories Style)
+1. Structure & Basics
+
+As a user, I want every page to follow proper HTML structure (<!DOCTYPE html>, <html>, <head>, <body>) so the site loads correctly.
+
+As a visitor, I want meaningful titles and headings so I can quickly understand each page.
+
+2. Navigation & Links
+
+As a visitor, I want a navigation bar with links to Home, Menu, About, Events, Contact pages.
+
+As a visitor, I want anchor links on the Menu page to jump to categories (Starters, Main Dishes, Desserts, Drinks).
+
+As a visitor, I want social media and email links so I can contact the restaurant easily.
+
+3. Lists
+
+As a customer, I want the Menu to use unordered lists for dishes within each category.
+
+As a customer, I want an ordered list showing the steps to order online or reserve a table.
+
+As a customer, I want a description list explaining cooking terms or food categories.
+
+4. Images & Multimedia
+
+As a visitor, I want high-quality images of dishes with alt text.
+
+As a visitor, I want a short video tour of the restaurant.
+
+As a visitor, I want to hear background music or an audio welcome message on the Home page.
+
+5. Tables
+
+As a visitor, I want to see a weekly events schedule (live music, special nights) in a table.
+
+As a visitor, I want the table to have headers, rows, and footers for clarity.
+
+6. Forms
+
+As a customer, I want a reservation form where I can enter my name, email, phone, date, time, and number of guests.
+
+As a customer, I want input validation (required fields, correct email format, date restrictions).
+
+7. Semantic HTML
+
+As a developer, I want the site structured with <header>, <footer>, <nav>, <main>, <section>, <article>, <aside>.
+
+As a visitor, I want each dish on the Menu inside <article> with its description.
+
+As a visitor, I want promotional offers or ads in <aside> sections.
+
+8. Metadata & Accessibility
+
+As a visitor, I want meta tags (charset, viewport, description) so the site is SEO-friendly and mobile-ready.
+
+As a visitor, I want a favicon with the restaurant’s logo.
+
+As a screen reader user, I want accessible images, labeled form fields, and ARIA roles so I can use the site easily.
+
+🛠 Deliverables
+
+At least 5 pages: Home, Menu, About, Events, Contact.
+
+Contains lists, tables, images, video, audio, forms, and semantic HTML.
+
+Consistent navigation bar across pages.
+
+W3C validated HTML.

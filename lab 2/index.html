@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="favicon.ico">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="index.html">Home </a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="events.html">Events</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Hello World</h1>
+        
+        <div style="border: 5px solid rgb(0, 17, 255); width: auto; height: auto;">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur voluptate, laudantium quas commodi qui sed molestiae ea dolorum,
+                dignissimos itaque rerum illo eveniet autem repudiandae.
+                Vitae ab recusandae atque accusamus?
+            </p>
+        </div>
+
+        
+
+        <aside aria-label="Cooking terms">
+            <h2>Cooking Terms</h2>
+            <dl>
+                <dt>Bake</dt>
+                <dd>To cook in an oven using dry heat</dd>
+                <dt>Boil</dt>
+                <dd>To cook in water or other liquid at a high temperature</dd>
+                <dt>Fry</dt>
+                <dd>To cook in hot oil or fat</dd>
+                <dt>Grill</dt>
+                <dd>To cook over direct heat, usually on a grill or barbecue</dd>
+            </dl>
+        </aside>
+
+        <h2>Short Video Tour of the Restaurant</h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/xPPLbEFbCAo" 
+            title="Video tour of the restaurant"
+            aria-label="Restaurant video tour"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe><br>
+
+        <audio src="new-recording-4-171501.mp3" controls autoplay aria-label="Welcome background music">        </audio>
+        <br>
+        <section>
+            <h2>Steps to Order</h2>
+            <ol>
+                <li>Choose your meal</li>
+                <li>Add to cart</li>
+                <li>Checkout</li>
+                <li>Receive your order</li>
+            </ol>
+        </section>
+
+        <h2>Reservation Form</h2>
+        <form action="index.html" name="reservation" method="get" aria-label="Reservation form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" aria-required="true"><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email"><br>
+
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="time"><br>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" name="guests" id="guests" min="1" max="20"><br>
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p></footer>
+</body>
+</html>
