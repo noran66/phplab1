@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <title>contact</title>
 </head>
+
 <body>
-    <header>
+  <header>
     <h1>This is the Contact Page</h1>
-    <nav>
-      <a href="home.html">Go to Home</a>
-      <a href="Destinations.html">Go to Destinations</a>
-      <a href="Tips.html">Go to Tips</a>
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li><a href="home.html" class="navbar">home</a></li>
+        <li><a href="Destinations.html" class="navbar">destination</a></li>
+        <li><a href="contact.html" class="navbar">contact</a></li>
+        <li><a href="Tips.html" class="navbar">Tips</a></li>
+
+      </ul>
     </nav>
   </header>
 
   <main>
     <p class="contact-intro">
-      If you have any questions or would like to get in touch, please feel free 
+      If you have any questions or would like to get in touch, please feel free
       to reach out via the contact form below. We value your feedback and look forward to hearing from you!
     </p>
+    <section class="feedback-section">
+            <h3 class="feedback-header">tell us your feedback</h3>
+            <form action="home.html" method="post" class="feedback-form">
+                <label for="name" class="labels">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" class="labels">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message" class="labels">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
 
     <p class="direct-email">
-      Or send us an email directly: 
+      Or send us an email directly:
       <a href="mailto:mohamednoran473@gmail.com">mohamednoran473@gmail.com</a>
     </p>
   </main>
-    
+
 </body>
+
 </html>

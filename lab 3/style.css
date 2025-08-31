@@ -10,30 +10,54 @@ body {
 
 h1 {
   text-align: center;
-  color: #2c3e50;
-}
-
-a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #0073e6;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #ff6600;
-}
-
-
-#head {
-  text-align: center;
   color: #fff;
   background-color: #000;
   padding: 20px;
   font-family: "Sofia", sans-serif;
+  border-radius: 10px;
 }
 
+/* روابط عامة */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: #a8a8e2;
+}
 
+/* النافيجيشن */
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                 
+  justify-content: center;      
+  background-color: rgb(7, 0, 0);
+  border-radius: 10px;
+}
+
+.navigation ul li {
+  margin: 0 10px;                
+}
+
+.navigation ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 13px 15px;
+}
+
+.navigation ul li a:hover {
+  background-color: gainsboro;
+  color: gray;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* الانترو */
 .intro {
   line-height: 1.8;
   text-align: justify;
@@ -45,51 +69,13 @@ a:hover {
   border-radius: 10px;
 }
 
-
 .intro_header {
   text-align: center;
   color: #05000f;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-.travel-image {
-  width: 30%;
-  height: auto;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.paris_header,
-.london_header {
-  text-align: center;
-  color: #fff;
-  font-family: "Times New Roman", serif;
-  background-color: rgb(51, 53, 53);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.paris_header {
-  color: #e74c3c;   
-}
-
-.london_header {
-  color: #2980b9;   
-}
-
-.paris,
-.london {
-  background-color: #f0f0f0;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-
-section {
-  margin-bottom: 30px;
-}
+/* الصور */
 .image-gallery {
   display: flex;
   justify-content: center;
@@ -104,51 +90,75 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-
 .travel-image:hover {
   transform: scale(1.05);
 }
-.tips_list {
-  list-style-type: disc;
-  padding-left: 20px;
+
+/* العناوين */
+.paris_header,
+.london_header,
+.tokyo_header {
+  text-align: center;
+  color: #fff;
+  font-family: "Times New Roman", serif;
+  background-color: rgb(51, 53, 53);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.tips-section {
-  background-color: #fefefe;
+.paris,
+.london,
+.tokyo {
+  background-color: #f0f0f0;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  border: 1px solid #ddd;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* النصائح */
+.tips-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tips-header {
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.tips-intro, 
-.tips-conclusion {
-  line-height: 1.6;
-  text-align: justify;
-  margin: 10px 0;
+.tips-intro {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .tips-list {
-  margin: 15px 40px;
-  padding: 0;
-  list-style-type: square;  
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
-.tips-list > li {
-  margin: 10px 0;
-  line-height: 1.6;
-  font-size: 15px;
+.tips-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
-.tips-list > li strong {
-  color: #0073e6;
+
+.tips-list strong {
+  color: #00796b;
+
 }
+
+/* التكاليف */
 .costs-section {
   margin: 30px 0;
   background-color: #fff;
@@ -189,6 +199,8 @@ section {
 .costs-table tr:nth-child(odd) {
   background-color: #ffffff;
 }
+
+/* الاقتباس */
 .quote-section {
   margin: 30px 0;
   text-align: center;
@@ -221,6 +233,8 @@ section {
   color: #555;
   font-style: normal;
 }
+
+/* الاشتراك */
 .subscribing {
   margin: 30px 0;
   text-align: center;
@@ -230,11 +244,13 @@ section {
   border: 1px solid #ddd;
   color: #187b0b;
 }
+
 .succeed {
   color: rgb(7, 73, 7);
   font-weight: bold;
   margin-top: 10px;
 }
+
 .subscription-section {
   background-color: #f9f9f9;
   padding: 25px;
@@ -278,16 +294,17 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .subscription-form button:hover {
   background-color: #010b15;
 }
 
-.read-more-btn, button {
+/* الأزرار */
+.read-more-btn, 
+button {
   display: inline-block;
   padding: 10px 20px;
   background-color: #0073e6;
-  color: #ffffff;
+  color: #fbfafa;
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -296,15 +313,20 @@ section {
   transition: background-color 0.3s;
 }
 
-.read-more-btn:hover, button:hover {
+.read-more-btn:hover, 
+button:hover {
   background-color: #032242;
 }
+
+/* تواصل */
 .contact-intro {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: justify;
   margin-bottom: 20px;
-  color: #be2828;
+  color: #000000;
+  background-color: rgb(222, 218, 218);
+  border-radius: 10px;
 }
 
 .direct-email {
@@ -323,5 +345,76 @@ section {
 .direct-email a:hover {
   text-decoration: underline;
 }
+#footer{
+  text-align: center;
+  padding: 15px;
+  background-color: #070707;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0073e6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  z-index: 1000;
+}
 
+.feedback-section {
+  background-color: #f9f9f9;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
 
+.feedback-header {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 15px;
+  color: #000000;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.feedback-form input {
+  padding: 10px;
+  width: 250px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feedback-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.feedback-form button:hover {
+  background-color: #010b15;
+}
+.labels {
+  font-weight: bold;
+  color: #00100e;
+  font-family: Cursive;
+}
