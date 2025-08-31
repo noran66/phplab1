@@ -1,0 +1,69 @@
+🧳 Travel Blog Project (HTML + CSS)
+
+Description
+
+Students will build a Travel Blog website where they share travel experiences, destinations, and tips. The goal is to practice HTML structure, CSS selectors, box model concepts, and different properties/values.
+
+
+---
+
+📌 User Stories
+
+1. As a user, I want to see a main heading at the top with the blog’s name ("My Travel Diary") so I know what the site is about.
+🔑 Hint: Use <h1> tag, text-align, font-family, and universal selector * {} to reset styles.
+
+
+2. As a visitor, I want a navigation bar with links ("Home", "Destinations", "Tips", "Contact") so I can move across the site.
+🔑 Hint: Use <nav><ul><li><a></a></li></ul></nav> and descendant selectors (nav ul li a).
+
+
+3. As a reader, I want an introductory paragraph about the blog so I understand the purpose.
+🔑 Hint: Use <p> with line-height, text-align: justify, and class selectors (.intro).
+
+
+4. As a visitor, I want images of destinations to appear on the blog so it feels visual and engaging.
+🔑 Hint: Use <img> tag with width, height, border-radius, and attribute selector (img[src]).
+
+
+5. As a user, I want each destination to have its own section with a subheading (e.g., "Paris", "Tokyo") so I can read clearly organized content.
+🔑 Hint: Use <section><h2></h2></section>, margin, padding (box model), and section h2 selector.
+
+
+6. As a visitor, I want to see bullet-point lists of travel tips under each section so I can quickly scan advice.
+🔑 Hint: Use <ul><li></li></ul> with list-style-type, child selectors (ul > li).
+
+
+7. As a user, I want certain words (like city names) to be bold so they stand out.
+🔑 Hint: Use <strong> or <b>, and font-weight property.
+
+
+8. As a visitor, I want a table comparing travel costs between destinations so I can make informed choices.
+🔑 Hint: Use <table><tr><td></td></tr></table>, border, padding, nth-child() selector for rows.
+
+
+9. As a reader, I want a blockquote with a famous travel quote to be highlighted so it adds inspiration.
+🔑 Hint: Use <blockquote> with padding, border-left, and background-color.
+
+
+10. As a visitor, I want a form where I can "Subscribe to Newsletter" so I can stay updated.
+🔑 Hint: Use <form><input><button></button></form>, ID selector (#subscribe), padding, margin.
+
+
+11. As a user, I want buttons (e.g., "Read More") styled differently when hovered so I feel interactivity.
+🔑 Hint: Use <button>, pseudo-class button:hover, background-color, cursor.
+
+
+12. As a visitor, I want different sections of the blog (Destinations, Tips, Contact) visually separated so the site feels structured.
+🔑 Hint: Use <div> or <section>, borders, margin, padding (box model).
+
+
+13. As a reader, I want an ordered list of "Top 5 Travel Tips" so I can follow them in order.
+🔑 Hint: Use <ol><li></li></ol> with list-style-type, and descendant selector ol li.
+
+
+14. As a visitor, I want certain text (like highlights or warnings) to be in italics so they stand out differently.
+🔑 Hint: Use <em> or <i>, font-style.
+
+
+15. As a user, I want a footer with copyright info and a link back to the top of the page so I can easily navigate.
+🔑 Hint: Use <footer><a href="#top"></a></footer>, text-align, padding, and ID selectors.

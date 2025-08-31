@@ -1,0 +1,327 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff6600;
+}
+
+
+#head {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+  font-family: "Sofia", sans-serif;
+}
+
+
+.intro {
+  line-height: 1.8;
+  text-align: justify;
+  font-size: 16px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+
+.intro_header {
+  text-align: center;
+  color: #05000f;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.travel-image {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paris_header,
+.london_header {
+  text-align: center;
+  color: #fff;
+  font-family: "Times New Roman", serif;
+  background-color: rgb(51, 53, 53);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.paris_header {
+  color: #e74c3c;   
+}
+
+.london_header {
+  color: #2980b9;   
+}
+
+.paris,
+.london {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.travel-image {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.travel-image:hover {
+  transform: scale(1.05);
+}
+.tips_list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.tips-section {
+  background-color: #fefefe;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.tips-header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Merriweather', serif;
+}
+
+.tips-intro, 
+.tips-conclusion {
+  line-height: 1.6;
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.tips-list {
+  margin: 15px 40px;
+  padding: 0;
+  list-style-type: square;  
+}
+
+.tips-list > li {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.tips-list > li strong {
+  color: #0073e6;
+}
+.costs-section {
+  margin: 30px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.costs-header {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.costs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.costs-table th, 
+.costs-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.costs-table th {
+  background-color: #2c2f31;
+  color: white;
+}
+
+.costs-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.costs-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.quote-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.quote-header {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.travel-quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid #0073e6;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: left;
+  color: #333;
+  font-style: italic;
+}
+
+.travel-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+  font-style: normal;
+}
+.subscribing {
+  margin: 30px 0;
+  text-align: center;
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  color: #187b0b;
+}
+.succeed {
+  color: rgb(7, 73, 7);
+  font-weight: bold;
+  margin-top: 10px;
+}
+.subscription-section {
+  background-color: #f9f9f9;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.subscription-header {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.subscription-form input {
+  padding: 10px;
+  width: 250px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscription-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #010b15;
+}
+
+.read-more-btn, button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover, button:hover {
+  background-color: #032242;
+}
+.contact-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #be2828;
+}
+
+.direct-email {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #444;
+}
+
+.direct-email a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.direct-email a:hover {
+  text-decoration: underline;
+}
+
+
