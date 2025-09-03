@@ -1,0 +1,75 @@
+.background {
+    border: 2px solid black;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+.tree {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.tree img {
+    width: 100%;
+    height: 100%;
+}
+.tree3{
+    left: 170px;
+    bottom: 0px;
+    z-index: 1;
+    width:400px;
+    height: 400px;
+}
+.tree5{
+    left: 400px;
+    bottom: 0px;
+    z-index: 2;
+    width:400px;
+    height: 400px;
+}
+.tree2{
+    left: 500px;
+    bottom: 0px;
+    z-index: 3;
+    width:400px;
+    height: 400px;
+}
+.tree1{
+    left: 0%;
+    bottom: 0px;
+    z-index: 4;
+    width:400px;
+    height: 400px;
+}
+.tree4{
+    left: 300px;
+    bottom: 0px;
+    z-index: 5;
+    width:400px;
+    height: 400px;
+}
+.tree6{
+    left: 600px;
+    bottom: 0px;
+    z-index: 6;
+    width:400px;
+    height: 400px;
+}
+.tree7{
+    left: 800px;
+    bottom: 0px;
+    z-index: 7;
+    width:400px;
+    height: 400px;
+}
+.tree8{
+    right: 700px;
+    bottom: 0px;
+    z-index: 8;
+    width:400px;
+    height: 400px;
+}
