@@ -2,8 +2,9 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
 }
-
 
 /* Header */
 .header ul {
@@ -206,6 +207,7 @@ body {
 .container2-films {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; 
 }
 
 .film-card {
@@ -248,9 +250,6 @@ body {
   background-color: rgb(40, 40, 40);
 }
 
-
-
-
 /* Section 3 */
 .container3 {
   margin-top: 40px;
@@ -274,7 +273,8 @@ body {
 }
 
 .trending-films {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
 
@@ -282,13 +282,12 @@ body {
   background-color: #1e1e1e;
   border-radius: 10px;
   overflow: hidden;
-  width: 200px;
   transition: 0.3s;
 }
 
 .film-card3 img {
   width: 100%;
-  height: 150px;   
+  height: auto;   
   object-fit: contain; 
   border-radius: 8px;
   background-color: black; 
@@ -314,6 +313,7 @@ body {
 .tags {
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -335,3 +335,40 @@ body {
 .tag.animation { background: orange; }
 .tag.drama { background: brown; }
 
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 768px) {
+  .container2-films {
+    justify-content: center;
+  }
+
+  .trending-films {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .film-title,
+  .classification,
+  .description {
+    left: 20px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container2-films {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film-card {
+    width: 90%;
+  }
+
+  .trending-films {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
