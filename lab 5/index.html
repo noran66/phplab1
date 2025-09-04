@@ -12,13 +12,21 @@
     <div class="background">
         <!-- Header -->
         <div class="header">
-            <ul>
+            <div class="logo">TopCinema</div>
+
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Movies</a></li>
                 <li><a href="#">Series</a></li>
                 <li><a href="#">Animations</a></li>
             </ul>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button>🔍</button>
+            </div>
         </div>
+
 
         <!-- Section 1 -->
         <div class="container1">
@@ -61,36 +69,49 @@
                 <div class="container2-films">
                     <div class="film-card">
                         <img src="img/movie1.png" alt="Ratatouille">
-                        <p>Ratatouille</p>
-                        <p class="desc">A rat who dreams of becoming a chef in Paris.</p>
+                        <div class="film-info">
+                            <p>Ratatouille</p>
+                            <p class="desc">A rat who dreams of becoming a chef in Paris.</p>
+
+                        </div>
                     </div>
 
                     <div class="film-card">
                         <img src="img/movie2.png" alt="Doctor Strange">
-                        <p>Doctor Strange</p>
-                        <p class="desc">A surgeon discovers the world of mystic arts.</p>
+                        <div class="film-info">
+                            <p>Doctor Strange</p>
+                            <p class="desc">A surgeon discovers the world of mystic arts.</p>
+                        </div>
                     </div>
 
                     <div class="film-card">
                         <img src="img/movie3.png" alt="Joker">
-                        <p>Joker</p>
-                        <p class="desc">A story about Gotham’s infamous villain.</p>
+                        <div class="film-info">
+                            <p>Joker</p>
+                            <p class="desc">A story about Gotham’s infamous villain.</p>
+                        </div>
                     </div>
-                    
+
                     <div class="film-card">
                         <img src="img/movie5.png" alt="Inception">
-                        <p> Despicable me</p>
-                        <p class="desc">A villain’s life changes after adopting three girls.</p>
+                        <div class="film-info">
+                            <p> Despicable me</p>
+                            <p class="desc">A villain’s life changes after adopting three girls.</p>
+                        </div>
                     </div>
                     <div class="film-card">
                         <img src="img/movie6.png" alt="Inception">
-                        <p> OpenHeimer</p>
-                        <p class="desc">The story of the father of the atomic bomb.</p>
+                        <div class="film-info">
+                            <p> OpenHeimer</p>
+                            <p class="desc">The story of the father of the atomic bomb.</p>
+                        </div>
                     </div>
                     <div class="film-card">
                         <img src="img/movie7.png" alt="Inception">
-                        <p> beauty and the beast</p>
-                        <p class="desc">A tale of love and transformation.</p>
+                        <div class="film-info">
+                            <p> beauty and the beast</p>
+                            <p class="desc">A tale of love and transformation.</p>
+                        </div>
                     </div>
 
                 </div>
@@ -172,6 +193,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Film 6 -->
                 <div class="film-card3">
                     <img src="img/movie14.png" alt="The Shawshank Redemption">
@@ -184,8 +206,123 @@
                         </div>
                     </div>
                 </div>
+                <!-- Film 7 -->
+                <div class="film-card3">
+                    <img src="img/movie24.png" alt="The Shawshank Redemption">
+                    <div class="film-info">
+                        <p class="film-name">Tangled</p>
+                        <div class="tags">
+                            <span class="tag drama">Drama</span>
+                            <span class="tag family">family</span>
+                            <span class="tag fantasy">Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Film 8 -->
+                <div class="film-card3">
+                    <img src="img/movie25.png" alt="Forrest Gump">
+                    <div class="film-info">
+                        <p class="film-name">Super-man</p>
+                        <div class="tags">
+                            <span class="tag drama">Drama</span>
+                            <span class="tag action">Action</span>
+                            <span class="tag fantasy">fantasy</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Section 4 -->
+        <div class="container4">
+            <div class="container4-header">
+                <h2>Recommended</h2>
+                <div class="tabs">
+                    <button class="active">Movies</button>
+                    <button>Series</button>
+                    <button>Animation</button>
+                </div>
+                <a href="#" class="view-all">View all →</a>
+            </div>
+
+            <div class="films-grid">
+                <div class="film-card4">
+                    <img src="img/movie17.png" alt="Robots">
+                    <p class="film-title4">Bat Man</p>
+                    <div class="film-meta">
+                        <span class="tag cam">CAM</span>
+                        <span class="time">⏱ 3:30:00</span>
+                    </div>
+                </div>
+
+                <div class="film-card4">
+                    <img src="img/movie18.png" alt="Love Again">
+                    <p class="film-title4">the pianist</p>
+                    <div class="film-meta">
+                        <span class="tag cam">CAM</span>
+                        <span class="time">⏱ 3:12:00</span>
+                    </div>
+                </div>
+                <div class="film-card4">
+                    <img src="img/movie23.png" alt="Love Again">
+                    <p class="film-title4">the imitation game</p>
+                    <div class="film-meta">
+                        <span class="tag cam">CAM</span>
+                        <span class="time">⏱ 3:12:00</span>
+                    </div>
+                </div>
+
+                <div class="film-card4">
+                    <img src="img/movie16.png" alt="Hypnotic">
+                    <p class="film-title4">ARRIVAL</p>
+                    <div class="film-meta">
+                        <span class="tag cam">CAM</span>
+                        <span class="time">⏱ 3:00:00</span>
+                    </div>
+                </div>
+
+                <div class="film-card4">
+                    <img src="img/movie15.png" alt="Paint">
+                    <p class="film-title4">Captain America</p>
+                    <div class="film-meta">
+                        <span class="tag hd">HD</span>
+                        <span class="time">⏱ 3:24:00</span>
+                    </div>
+                </div>
+                <div class="film-card4">
+                    <img src="img/movie22.png" alt="Paint">
+                    <p class="film-title4">SKYFALL</p>
+                    <div class="film-meta">
+                        <span class="tag hd">HD</span>
+                        <span class="time">⏱ 3:00:00</span>
+                    </div>
+                </div>
+                <div class="film-card4">
+                    <img src="img/movie19.png" alt="Paint">
+                    <p class="film-title4">Green Book</p>
+                    <div class="film-meta">
+                        <span class="tag hd">HD</span>
+                        <span class="time">⏱ 3:12:00</span>
+                    </div>
+                </div>
+                <div class="film-card4">
+                    <img src="img/movie20.png" alt="Paint">
+                    <p class="film-title4">Soul</p>
+                    <div class="film-meta">
+                        <span class="tag hd">HD</span>
+                        <span class="time">⏱ 2:30:00</span>
+                    </div>
+                </div>
+                <div class="film-card4">
+                    <img src="img/movie21.png" alt="Paint">
+                    <p class="film-title4">I AM LEGEND</p>
+                    <div class="film-meta">
+                        <span class="tag hd">HD</span>
+                        <span class="time">⏱ 3:12:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
     </div>
