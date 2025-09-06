@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project 3 - Image Toggle</title>
+</head>
+
+<body>
+    <img id="Image" src="work1.webp" width="200">
+    <br><br>
+    <button onclick="toggleImage()">Toggle Image</button>
+
+    <script>
+        let images = [
+            "work2.webp",
+            "work3.webp",
+            "work1.webp"
+        ];
+        let counter = 0;
+
+        function toggleImage() {
+            document.getElementById("Image").src = images[counter];
+
+            counter++;
+            if (counter >= images.length) {
+                counter = 0;
+            }
+        }
+         setInterval(toggleImage, 1000);
+
+
+    </script>
+</body>
+
+</html>
