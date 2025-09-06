@@ -87,7 +87,7 @@
 }
 
 .button2:hover {
-  background-color: darkblue;
+  background-color: rgb(36, 36, 92);
   color: white;
   transition: all .3s;
   transform: scale(1.05);
@@ -298,5 +298,92 @@
   position: relative;
   z-index: 2;
 }
+.section5 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.header-section5 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.header-section5 h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #6c63ff; 
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section5 p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.section5 ul {
+  margin-top: 20px;
+}
+
+.section5 li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.check-icon {
+  color: #6c63ff;
+  margin-right: 8px;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+
+.section5 li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section5 li:hover .check-icon {
+  color: #00b894; 
+  transform: scale(1.2); 
+}
+
+.section5 li:hover {
+  color: #000; 
+  transform: translateX(5px); 
+}
+.header-section5 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-section5 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.header-section5 h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #6c63ff; 
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+
 
 
