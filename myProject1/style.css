@@ -224,3 +224,79 @@
 .icons a:hover {
   color: #0d6efd; 
 }
+.section4 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.header-section4 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-section4 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.header-section4 h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #6c63ff; 
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.icon {
+  font-size: 30px;
+  color: #6c63ff; 
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: rgba(0,0,0,0.6); 
+  transition: width 0.4s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.card:hover::before {
+  width: 100%;
+}
+.card:hover .icon {
+  color: #41da39;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+
