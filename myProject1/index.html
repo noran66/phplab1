@@ -7,42 +7,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
     <link href="style.css" rel="stylesheet">
     <title>digital Groove</title>
 </head>
 
 <body>
     <nav class="navbar bg-body-tertiary bg-dark fixed-top custom-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo-alt.webp" alt="logo" width="100" height="100">
-            </a>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link home-tab" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Price</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">contact</a>
-                </li>
-            </ul>
-        </div>
-
-    </nav>
-    <section class="section1">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <img src="images/logo-alt.webp" alt="logo" width="100" height="100">
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link home-tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#pricing">Price</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#news">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+>
+    <section class="section1" id="home">
         <h1 class="header-section1">WE ARE CREATIVE AGENCY</h1>
         <p class="content-section1">Your tagline or description goes here. It will appear here.</p>
         <div>
@@ -51,7 +49,7 @@
         </div>
     </section>
 
-    <section class="section2 container text-center my-5 pt-5">
+    <section class="section2 container text-center my-5 pt-5" id="about">
         <h2 class="section-title">Welcome To Website</h2>
         <div class="row mt-4">
             <div class="col-md-4">
@@ -165,7 +163,7 @@
             </div>
         </div>
     </section>
-    <section class="section4">
+    <section class="section4 ">
   <div class="header-section4">
     <h2>What We Offer</h2>
   </div>
@@ -266,6 +264,252 @@
     </div>
   </div>
 </section>
+<section class="section-counters text-center py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-3">
+        <i class="bi bi-people-fill counter-icon"></i>
+        <h3>451</h3>
+        <p>Happy Clients</p>
+      </div>
+
+      <div class="col-md-3">
+        <i class="bi bi-briefcase-fill counter-icon"></i>
+        <h3>125</h3>
+        <p>Projects Completed</p>
+      </div>
+
+      <div class="col-md-3">
+        <i class="bi bi-award-fill counter-icon"></i>
+        <h3>24</h3>
+        <p>Awards Won</p>
+      </div>
+
+      <div class="col-md-3">
+        <i class="bi bi-clock-fill counter-icon"></i>
+        <h3>10+</h3>
+        <p>Years Experience</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section6 py-5" id="pricing">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2>Pricing Table</h2>
+    </div>
+
+    <div class="row">
+      <!-- Basic Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <h3 class="plan-title">Basic Plan</h3>
+          <div class="price-circle">
+            <h4>$16</h4>
+            <span>/month</span>
+          </div>
+          <ul class="list-unstyled">
+            <li>1 GB Disk Space</li>
+            <li>100 Email Accounts</li>
+            <li>24/7 Support</li>
+            <li>Basic Customization</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary">Purchase</a>
+        </div>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card featured text-center">
+          <h3 class="plan-title">Standard Plan</h3>
+          <div class="price-circle">
+            <h4>$29</h4>
+            <span>/month</span>
+          </div>
+          <ul class="list-unstyled">
+            <li>10 GB Disk Space</li>
+            <li>500 Email Accounts</li>
+            <li>24/7 Priority Support</li>
+            <li>Advanced Customization</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary">Purchase</a>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <h3 class="plan-title">Premium Plan</h3>
+          <div class="price-circle">
+            <h4>$49</h4>
+            <span>/month</span>
+          </div>
+          <ul class="list-unstyled">
+            <li>50 GB Disk Space</li>
+            <li>1000 Email Accounts</li>
+            <li>24/7 VIP Support</li>
+            <li>Full Customization</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary">Purchase</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Founders Section -->
+<section class="founders">
+  <div class="founders-overlay">
+    <div class="container">
+      <h2>Meet Our Founders</h2>
+      <div class="founder-boxes">
+        
+        <div class="founder">
+          <img src="images/team/team2.webp" alt="Founder 1">
+          <h3>Mohamed Raffat</h3>
+          <h4>CEO & Founder</h4>
+          <p>My name Mohamed Raffat Sallam, passionate about programming and dreaming to be a big boss in computer science.</p>
+        </div>
+        
+        <div class="founder">
+          <img src="images/team/team1.webp" alt="Founder 2">
+          <h3>Johar Deoo</h3>
+          <h4>Web Designer</h4>
+          <p>Creative designer with a mission to bring ideas to life through modern and clean design concepts.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Team Section ===== -->
+<section class="team" id="team">
+  <div class="header-section4">
+    <h2>Meet Our Team</h2>
+  </div>
+
+  <div class="team-grid">
+    <!-- عضو 1 -->
+    <div class="team-member">
+      <img src="images/team/team2.webp" alt="Team Member 1">
+      <div class="team-overlay">
+        <h5>Ali Mohamed</h5>
+        <p>Frontend Developer</p>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- عضو 2 -->
+    <div class="team-member">
+      <img src="images/team/team3.webp" alt="Team Member 2">
+      <div class="team-overlay">
+        <h5>Noha Ali</h5>
+        <p>Backend Developer</p>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- عضو 3 -->
+    <div class="team-member">
+      <img src="images/team/team1.webp" alt="Team Member 3">
+      <div class="team-overlay">
+        <h5>Omar Hassan</h5>
+        <p>UI/UX Designer</p>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Recent News Section ===== -->
+<section class="news" id="news">
+  <div class="header-section4">
+    <h2>Recent News</h2>
+  </div>
+
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="images/blog/blog3.webp" alt="News 1">
+      <div class="news-body">
+        <span class="date">Sep 1, 2025</span>
+        <h5>New Project Launch</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quos.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/blog/blog2.webp" alt="News 2">
+      <div class="news-body">
+        <span class="date">Aug 28, 2025</span>
+        <h5>Team Expansion</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quos.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/blog/blog1.webp" alt="News 3">
+      <div class="news-body">
+        <span class="date">Aug 15, 2025</span>
+        <h5>Partnership Announced</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quos.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="header-section4">
+    <h2>Contact Us</h2>
+  </div>
+
+  <div class="contact-container">
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h5>Get in Touch</h5>
+      <p><i class="bi bi-geo-alt"></i> 123 Street, Cairo, Egypt</p>
+      <p><i class="bi bi-telephone"></i> +20 123 456 789</p>
+      <p><i class="bi bi-envelope"></i> info@company.com</p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container text-center">
+    <div class="footer-logo mb-3">
+      <img src="images/logo-alt.webp" alt="Logo" width="80">
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <p class="mt-3">© 2025 Your Company. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
 
 
 
