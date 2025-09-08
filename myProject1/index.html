@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
     <link href="style.css" rel="stylesheet">
     <title>digital Groove</title>
 </head>
@@ -36,12 +37,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
             </li>
+            <li class="nav-item">
+              <button id="theme-toggle">🌙</button>
+            </li>
         </ul>
     </div>
 </nav>
 
-    <section class="section1" id="home">
-        <h1 class="header-section1">WE ARE CREATIVE AGENCY</h1>
+    <section class="section1 hidden" id="home" >
+        <h1 class="header-section1 hidden">WE ARE CREATIVE AGENCY</h1>
         <p class="content-section1">Your tagline or description goes here. It will appear here.</p>
         <div>
             <button class="btn-custom button1">Learn More!</button>
@@ -49,7 +53,7 @@
         </div>
     </section>
 
-    <section class="section2 container text-center my-5 pt-5" id="about">
+    <section class="section2 container text-center my-5 pt-5 hidden" id="about">
         <h2 class="section-title">Welcome To Website</h2>
         <div class="row mt-4">
             <div class="col-md-4">
@@ -87,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="section3">
+    <section class="section3 hidden">
         <div class="header-section3">
             <h2>Featured Works</h2>
         </div>
@@ -163,7 +167,7 @@
             </div>
         </div>
     </section>
-    <section class="section4 ">
+    <section class="section4 hidden ">
   <div class="header-section4">
     <h2>What We Offer</h2>
   </div>
@@ -242,7 +246,7 @@
     </div>
   </div>
 </section>
-<section class="section5">
+<section class="section5 hidden">
   <div class="container">
     <div class="row align-items-center">
       
@@ -264,38 +268,33 @@
     </div>
   </div>
 </section>
-<section class="section-counters text-center py-5 bg-dark text-white">
-  <div class="container">
+<section class="section-counters text-center py-5 bg-dark text-white  "id="counters">
+  <div class="container text-center">
     <div class="row">
-      
       <div class="col-md-3">
-        <i class="bi bi-people-fill counter-icon"></i>
-        <h3>451</h3>
-        <p>Happy Clients</p>
+        <i class="bi bi-people counter-icon"></i>
+        <h3 class="counter" data-target="250">0</h3>
+        <p>Clients</p>
       </div>
-
       <div class="col-md-3">
-        <i class="bi bi-briefcase-fill counter-icon"></i>
-        <h3>125</h3>
-        <p>Projects Completed</p>
+        <i class="bi bi-briefcase counter-icon"></i>
+        <h3 class="counter" data-target="120">0</h3>
+        <p>Projects</p>
       </div>
-
       <div class="col-md-3">
-        <i class="bi bi-award-fill counter-icon"></i>
-        <h3>24</h3>
-        <p>Awards Won</p>
+        <i class="bi bi-award counter-icon"></i>
+        <h3 class="counter" data-target="45">0</h3>
+        <p>Awards</p>
       </div>
-
       <div class="col-md-3">
-        <i class="bi bi-clock-fill counter-icon"></i>
-        <h3>10+</h3>
+        <i class="bi bi-clock counter-icon"></i>
+        <h3 class="counter" data-target="10">0</h3>
         <p>Years Experience</p>
       </div>
-
     </div>
   </div>
 </section>
-<section class="section6 py-5" id="pricing">
+<section class="section6 py-5 hidden " id="pricing">
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2>Pricing Table</h2>
@@ -359,7 +358,7 @@
   </div>
 </section>
 <!-- Founders Section -->
-<section class="founders">
+<section class="founders hidden">
   <div class="founders-overlay">
     <div class="container">
       <h2>Meet Our Founders</h2>
@@ -384,7 +383,7 @@
   </div>
 </section>
 <!-- ===== Team Section ===== -->
-<section class="team" id="team">
+<section class="team hidden" id="team">
   <div class="header-section4">
     <h2>Meet Our Team</h2>
   </div>
@@ -434,7 +433,7 @@
   </div>
 </section>
 <!-- ===== Recent News Section ===== -->
-<section class="news" id="news">
+<section class="news hidden "id="news" >
   <div class="header-section4">
     <h2>Recent News</h2>
   </div>
@@ -471,16 +470,16 @@
     </div>
   </div>
 </section>
-<section class="contact" id="contact">
+<section class="contact hidden" id="contact">
   <div class="header-section4">
     <h2>Contact Us</h2>
   </div>
 
   <div class="contact-container">
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
+    <form class="contact-form" id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
@@ -492,7 +491,7 @@
     </div>
   </div>
 </section>
-<footer class="footer">
+<footer class="footer hidden">
   <div class="container text-center">
     <div class="footer-logo mb-3">
       <img src="images/logo-alt.webp" alt="Logo" width="80">
@@ -510,9 +509,12 @@
 </footer>
 
 
+<button id="backToTop" title="Go to top">
+  <i class="bi bi-airplane"></i>
+</button>
 
 
-
+<script src="main.js"></script>
 </body>
 
 </html>
