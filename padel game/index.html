@@ -1,61 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paddle Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div class="container">
-        <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
-        <div class="box box5"></div>
-        <div class="box box6"></div>
-        <div class="box box7"></div>
-        <div class="box box8"></div>
-        <div class="box box9"></div>
-        <div class="box box10"></div>
-        <div class="box box11"></div>
-        <div class="box box12"></div>
-        <div class="box box13"></div>
-        <div class="box box14"></div>
-        <div class="box box15"></div>
-        <div class="box box16"></div>
-    </div>
-    <div class="canvas">
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000; margin-top: 20px;">
-        </canvas>
-        <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000; margin-top: 20px;">
-        </canvas>
 
-    </div>
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-        ctx.stroke();
-        ctx.fillStyle = "blue";
-         ctx.fill();
+  <div class="container">
+  <div id="lives"></div>
+  <canvas id="gameCanvas" width="500" height="400"></canvas>
+</div>
+ 
 
-        var b = document.getElementById("myCanvas2");
-        var ctx2 = b.getContext("2d");
 
-        // Create gradient
-        var grd = ctx2.createLinearGradient(0, 0, 200, 0);
-        grd.addColorStop(0, "red");
-        grd.addColorStop(1, "white");
+  <div id="overlay">
+    <p id="message">Press Start to Play</p>
+    <button id="startBtn">Start</button>
+    <button id="restartBtn">Restart</button>
+  </div>
 
-        // Fill with gradient
-        ctx2.fillStyle = grd;
-        ctx2.fillRect(10, 10, 150, 80);
-
-    </script>
+  <script src="main.js"></script>
 </body>
-
 </html>
