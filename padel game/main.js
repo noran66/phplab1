@@ -38,24 +38,47 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.addEventListener("touchmove", handleTouch, false);
 
   function handleTouch(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     const touch = e.touches[0];
     const rect = canvas.getBoundingClientRect();
     const touchX = touch.clientX - rect.left;
     paddleX = touchX - paddleWidth / 2;
     if (paddleX < 0) paddleX = 0;
-    if (paddleX + paddleWidth > canvas.width) paddleX = canvas.width - paddleWidth;
+    if (paddleX + paddleWidth > canvas.width)
+      paddleX = canvas.width - paddleWidth;
   }
 
   // --- Lives ---
-  function updateLives() {
-    livesDiv.innerHTML = "";
-    for (let i = 0; i < lives; i++) {
-      const heart = document.createElement("span");
-      heart.textContent = "❤️";
-      livesDiv.appendChild(heart);
-    }
+ function updateLives() {
+  livesDiv.innerHTML = "";
+
+  for (let i = 0; i < lives; i++) {
+    const heart = document.createElement("span");
+    heart.textContent = "❤️";
+    heart.classList.add("heart");
+    livesDiv.appendChild(heart);
   }
+}
+
+function loseLife() {
+  if (lives > 0) {
+    const hearts = livesDiv.querySelectorAll(".heart");
+    const lastHeart = hearts[hearts.length - 1];
+
+    lastHeart.classList.add("lost"); 
+
+    lastHeart.addEventListener(
+      "animationend",
+      () => {
+        lives--;
+        updateLives();
+      },
+      { once: true }
+    );
+  }
+}
+
+
 
   // --- Reset ball & paddle ---
   function resetBallAndPaddle() {
@@ -75,8 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBallAndPaddle();
     message.textContent = "";
     overlay.style.display = "none";
-    restartBtn.style.display = "none"; 
-    startBtn.style.display = "none";   
+    restartBtn.style.display = "none";
+    startBtn.style.display = "none";
     gameRunning = true;
     clearInterval(gameInterval);
     gameInterval = setInterval(draw, 16);
@@ -127,8 +150,16 @@ document.addEventListener("DOMContentLoaded", () => {
           blocks[c][r].y = blockY;
           ctx.beginPath();
           ctx.rect(blockX, blockY, blockWidth, blockHeight);
-          ctx.fillStyle = "#ffeb3b";
+          let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+
+          gradient.addColorStop(0, "#FFD700"); // ذهبي
+          gradient.addColorStop(0.5, "#FF8C00"); // برتقالي غامق
+          gradient.addColorStop(1, "#FFD700"); // ذهبي
+
+          ctx.fillStyle = gradient;
           ctx.fill();
+
+
           ctx.closePath();
         }
       }
@@ -151,7 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
             b.status = 0;
             score++;
 
-            // احتمال ينزل Power-up
             if (Math.random() < 0.2) {
               spawnPowerUp(b.x + blockWidth / 2, b.y + blockHeight / 2);
             }
@@ -169,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function drawBall() {
     ctx.beginPath();
     ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "#00e5ff";
+    ctx.fillStyle = "#E9B3FB";
     ctx.fill();
     ctx.closePath();
   }
@@ -177,8 +207,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Draw Paddle ---
   function drawPaddle() {
     ctx.beginPath();
-    ctx.rect(paddleX, canvas.height - paddleHeight - 10, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#4caf50";
+    ctx.rect(
+      paddleX,
+      canvas.height - paddleHeight - 10,
+      paddleWidth,
+      paddleHeight
+    );
+    ctx.fillStyle = "#E9B3FB";
     ctx.fill();
     ctx.closePath();
   }
@@ -203,10 +238,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // شريط عمودي
     ctx.fillStyle = "#ffd700";
-    ctx.fillRect(powerUp.x + powerUp.width / 2 - 3, powerUp.y, 6, powerUp.height);
+    ctx.fillRect(
+      powerUp.x + powerUp.width / 2 - 3,
+      powerUp.y,
+      6,
+      powerUp.height
+    );
 
     // شريط أفقي
-    ctx.fillRect(powerUp.x, powerUp.y + powerUp.height / 2 - 3, powerUp.width, 6);
+    ctx.fillRect(
+      powerUp.x,
+      powerUp.y + powerUp.height / 2 - 3,
+      powerUp.width,
+      6
+    );
 
     // فيونكة
     ctx.beginPath();
@@ -226,7 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
       powerUp.x <= paddleX + paddleWidth
     ) {
       paddleWidth = 120;
-      setTimeout(() => { paddleWidth = 80; }, 5000);
+      setTimeout(() => {
+        paddleWidth = 80;
+      }, 5000);
       powerUp = null;
     }
 
@@ -244,10 +291,12 @@ document.addEventListener("DOMContentLoaded", () => {
     collisionDetection();
 
     // Bounce
-    if (ballX + ballSpeedX > canvas.width - ballRadius || ballX + ballSpeedX < ballRadius)
+    if (
+      ballX + ballSpeedX > canvas.width - ballRadius ||
+      ballX + ballSpeedX < ballRadius
+    )
       ballSpeedX = -ballSpeedX;
-    if (ballY + ballSpeedY < ballRadius)
-      ballSpeedY = -ballSpeedY;
+    if (ballY + ballSpeedY < ballRadius) ballSpeedY = -ballSpeedY;
     else if (ballY + ballSpeedY > canvas.height - ballRadius) {
       if (ballX > paddleX && ballX < paddleX + paddleWidth)
         ballSpeedY = -ballSpeedY;
@@ -280,5 +329,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Button Events ---
   startBtn.addEventListener("click", startGame);
   restartBtn.addEventListener("click", restartGame);
-
 });
