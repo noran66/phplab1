@@ -35,6 +35,22 @@ const blockPadding = 10;
 const blockOffsetTop = 30;
 const blockOffsetLeft = 35;
 let blocks = [];
+// --- Mobile touch control ---
+canvas.addEventListener("touchstart", handleTouch, false);
+canvas.addEventListener("touchmove", handleTouch, false);
+
+function handleTouch(e) {
+  e.preventDefault(); 
+  const touch = e.touches[0];
+  const rect = canvas.getBoundingClientRect();
+  const touchX = touch.clientX - rect.left;
+
+  paddleX = touchX - paddleWidth / 2;
+
+  if (paddleX < 0) paddleX = 0;
+  if (paddleX + paddleWidth > canvas.width) paddleX = canvas.width - paddleWidth;
+}
+
 
 // --- Lives (❤️) ---
 function updateLives() {
