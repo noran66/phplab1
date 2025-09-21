@@ -2,8 +2,8 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 const startBtn = document.getElementById("startBtn");
-const restartBtn = document.getElementById("restartBtn");
 const message = document.getElementById("message");
+const restartBtn = document.getElementById("restartBtn");
 const overlay = document.getElementById("overlay");
 const livesDiv = document.getElementById("lives");
 
@@ -22,6 +22,10 @@ let lives = 3;
 let gameInterval;
 let gameRunning = false;
 
+// --- Power-up ---
+let powerUp = null;
+let powerUpActive = false;
+
 // Blocks
 const blockRowCount = 5;
 const blockColumnCount = 7;
@@ -36,7 +40,6 @@ let blocks = [];
 function updateLives() {
   const livesDiv = document.getElementById("lives");
 
-  // لو أول مرة نبدأ اللعبة، نرسم القلوب كلها
   if (livesDiv.children.length === 0) {
     for (let i = 0; i < lives; i++) {
       const heart = document.createElement("span");
@@ -44,7 +47,6 @@ function updateLives() {
       livesDiv.appendChild(heart);
     }
   } else {
-    // لو خسر حياة
     const hearts = livesDiv.querySelectorAll("span");
     if (hearts[lives]) {
       hearts[lives].classList.add("heart-lost"); 
@@ -54,7 +56,6 @@ function updateLives() {
     }
   }
 }
-
 
 // --- Reset ball & paddle ---
 function resetBallAndPaddle() {
@@ -74,7 +75,8 @@ function startGame() {
   resetBallAndPaddle();
   message.textContent = "";
   overlay.style.display = "none";
-  restartBtn.style.display = "none"; // مخفي في الأول
+  restartBtn.style.display = "none"; 
+  startBtn.style.display = "none";   
   gameRunning = true;
   clearInterval(gameInterval);
   gameInterval = setInterval(draw, 16);
@@ -149,6 +151,12 @@ function collisionDetection() {
           ballSpeedY = -ballSpeedY;
           b.status = 0;
           score++;
+
+          // احتمال ينزل Power-up
+          if (Math.random() < 0.2) {
+            spawnPowerUp(b.x + blockWidth / 2, b.y + blockHeight / 2);
+          }
+
           if (score === blockRowCount * blockColumnCount) {
             youWin();
           }
@@ -183,6 +191,63 @@ function drawScore() {
   ctx.fillText("Score: " + score, 8, 20);
 }
 
+// --- Power-up ---
+function spawnPowerUp(x, y) {
+  powerUp = {
+    x: x,
+    y: y,
+    width: 20,
+    height: 20,
+    speed: 2
+  };
+}
+
+function drawPowerUp() {
+  if (powerUp) {
+    // جسم الهدية
+    ctx.fillStyle = "#ff4d6d"; // أحمر غامق
+    ctx.fillRect(powerUp.x, powerUp.y, powerUp.width, powerUp.height);
+
+    // شريط عمودي
+    ctx.fillStyle = "#ffd700"; // دهبي
+    ctx.fillRect(powerUp.x + powerUp.width / 2 - 3, powerUp.y, 6, powerUp.height);
+
+    // شريط أفقي
+    ctx.fillRect(powerUp.x, powerUp.y + powerUp.height / 2 - 3, powerUp.width, 6);
+
+    // فيونكة فوق (شكل بسيط بدائرتين)
+    ctx.beginPath();
+    ctx.arc(powerUp.x + 5, powerUp.y, 6, 0, Math.PI * 2);
+    ctx.arc(powerUp.x + powerUp.width - 5, powerUp.y, 6, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffd700";
+    ctx.fill();
+    ctx.closePath();
+
+    
+    powerUp.y += powerUp.speed;
+
+   
+    if (
+      powerUp.y + powerUp.height >= canvas.height - paddleHeight - 10 &&
+      powerUp.x + powerUp.width >= paddleX &&
+      powerUp.x <= paddleX + paddleWidth
+    ) {
+      powerUpActive = true;
+      paddleWidth = 120; 
+      setTimeout(() => {
+        paddleWidth = 80;
+        powerUpActive = false;
+      }, 5000);
+      powerUp = null;
+    }
+
+    if (powerUp && powerUp.y > canvas.height) {
+      powerUp = null;
+    }
+  }
+}
+
+
 // --- Draw Everything ---
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -191,6 +256,7 @@ function draw() {
   drawBall();
   drawPaddle();
   drawScore();
+  drawPowerUp();
   collisionDetection();
 
   // Bounce off walls

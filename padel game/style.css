@@ -93,15 +93,29 @@ body {
   padding: 18px;
   box-sizing: border-box;
 }
+#overlay.hidden {
+  display: none; 
+}
 
 #overlay h1 {
   margin: 0;
-  font-size: 30px;
-  color: var(--gold);
-  text-shadow: 0 6px 22px rgba(0,0,0,0.7), 0 0 14px rgba(255,204,0,0.08);
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #FFD700, #FF8C00, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
   animation: glow 1.6s ease-in-out infinite alternate;
-  letter-spacing: 0.4px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+#overlay h1:hover {
+  transform: translateY(-4px) scale(1.08);
+  text-shadow: 0 8px 24px rgba(100, 192, 9, 0.8), 0 0 18px rgba(255,215,0,0.9);
+}
+
 
 @keyframes glow {
   from { text-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 0 8px rgba(255,204,0,0.06); }
@@ -139,7 +153,8 @@ body {
 
 #startBtn:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.55);
+  box-shadow: 0 20px 48px rgba(67, 129, 31, 0.55);
+  background: linear-gradient(90deg, rgb(2, 6, 80), rgb(110, 237, 110));
 }
 
 #restartBtn {
@@ -147,10 +162,16 @@ body {
   color: #fff;
 }
 
-#restartBtn:hover,
-#message:hover {
+#restartBtn:hover
+ {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 20px 48px rgba(0,0,0,0.55);
+background: linear-gradient(90deg, #341013, #ff4d6d);
+
+}
+#message:hover{
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(129, 186, 15, 0.55);
 }
 
 .btn-ghost {
